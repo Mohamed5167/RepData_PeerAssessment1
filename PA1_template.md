@@ -33,11 +33,6 @@ hist_plot
 
 
 ```r
-ggsave("./figure/plot1.png", hist_plot)
-```
-
-
-```r
 mean_steps <- mean(total_steps$steps)
 ```
 
@@ -61,12 +56,7 @@ time_plot <- ggplot(interval_steps, aes(x = interval, y = steps, group = 1)) +
 time_plot
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-6-1.png)<!-- -->
-
-
-```r
-ggsave("./figure/plot2.png", time_plot)
-```
+![](PA1_template_files/figure-html/unnamed-chunk-5-1.png)<!-- -->
 
 
 ```r
@@ -97,12 +87,7 @@ new_hist_plot <- ggplot(new_total_steps, aes(x = steps)) +
 new_hist_plot
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-10-1.png)<!-- -->
-
-
-```r
-ggsave("./figure/plot3.png", new_hist_plot)
-```
+![](PA1_template_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
 
 
 ```r
@@ -122,6 +107,7 @@ kable(matrix_dt)
 |:-----------|:----------------|:------|
 |NA Ignored  |10766.1886792453 |10765  |
 |NA Replaced |10749.7704918033 |10641  |
+   
 The values differ by a small margin. 
 
 

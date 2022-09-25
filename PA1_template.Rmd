@@ -27,10 +27,6 @@ hist_plot <- ggplot(total_steps, aes(x = steps)) +
 hist_plot
 ```
 
-```{r message = FALSE}
-ggsave("./figure/plot1.png", hist_plot)
-```
-
 ```{r results = "hide"}
 mean_steps <- mean(total_steps$steps)
 ```
@@ -51,10 +47,6 @@ time_plot <- ggplot(interval_steps, aes(x = interval, y = steps, group = 1)) +
   geom_line(color = "indianred3", size = 1.1) +
   labs(title = "Average Daily Steps", x = "Interval", y = "Average Steps")
 time_plot
-```
-
-```{r message = FALSE}
-ggsave("./figure/plot2.png", time_plot)
 ```
 
 ```{r results = "hide"}
@@ -83,10 +75,6 @@ new_hist_plot <- ggplot(new_total_steps, aes(x = steps)) +
 new_hist_plot
 ```
 
-```{r message = FALSE}
-ggsave("./figure/plot3.png", new_hist_plot)
-```
-
 ```{r}
 new_mean_steps <- mean(new_total_steps$steps)
 new_median_steps <- median(new_total_steps$steps)
@@ -97,6 +85,7 @@ matrix_dt[, 2:3] <- c(mean_steps, new_mean_steps, median_steps, new_median_steps
 colnames(matrix_dt) <- list("Estimate", "Mean", "Median")
 kable(matrix_dt)
 ```
+   
 The values differ by a small margin. 
 
 
